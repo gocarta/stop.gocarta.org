@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const stop_id = params.get("id");
+            const url = "https://bustracker.gocarta.org/predictions/bystop/bustime:" + stop_id;
+            window.location = url;
+        </script>
+    </body>
+</html>
