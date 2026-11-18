@@ -4,18 +4,18 @@
 
     </head>
     <body>
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5BW3ZWX3"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BCVY8983D"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'G-5BCVY8983D');
             
             const params = new URLSearchParams(window.location.search);
             const stop_id = params.get("id");
 
             if (stop_id) {
-                window.dataLayer.push({
-                    'event': 'stop_redirect',
+                gtag('event', 'stop_redirect', {
                     'stop_id': stop_id
                 });
             }
