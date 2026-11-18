@@ -14,7 +14,8 @@
             const stop_id = params.get("id");
 
             if (stop_id) {
-                gtag('event', 'stop_redirect', {
+                window.dataLayer.push({
+                    'event': 'stop_redirect',
                     'stop_id': stop_id
                 });
             }
