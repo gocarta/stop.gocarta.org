@@ -14,7 +14,10 @@
             const stop_id = params.get("id");
             // const url = "https://bustracker.gocarta.org/predictions/bystop/bustime:" + stop_id;
             const url = "https://bustracker.gocarta.org/map?stpid=bustime:" + stop_id;
-            window.location = url;
+
+            setTimeout(function() {
+                window.location = url;
+            }, 200);
         </script>
     </body>
 </html>
