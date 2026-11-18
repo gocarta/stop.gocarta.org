@@ -12,6 +12,13 @@
             
             const params = new URLSearchParams(window.location.search);
             const stop_id = params.get("id");
+
+            if (stop_id) {
+                gtag('event', 'stop_redirect', {
+                    'stop_id': stop_id
+                });
+            }
+            
             // const url = "https://bustracker.gocarta.org/predictions/bystop/bustime:" + stop_id;
             const url = "https://bustracker.gocarta.org/map?stpid=bustime:" + stop_id;
 
