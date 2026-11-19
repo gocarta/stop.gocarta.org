@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>stop.gocarta.org</title>
     </head>
     <body>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BCVY8983D"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5BCVY8983D');
-            
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5BW3ZWX3"></script>        
+        <script>            
             const params = new URLSearchParams(window.location.search);
             const stop_id = params.get("id");
-
-            if (stop_id) {
-                gtag('event', 'stop_redirect', {
-                    'stop_id': stop_id
-                });
-            }
+            
+            document.title = "stop.gocarta.org: " + stop_id;
             
             // const url = "https://bustracker.gocarta.org/predictions/bystop/bustime:" + stop_id;
             const url = "https://bustracker.gocarta.org/map?stpid=bustime:" + stop_id;
 
             setTimeout(function() {
                 window.location = url;
-            }, 10 * 1000);
+            }, 250);
         </script>
     </body>
 </html>
